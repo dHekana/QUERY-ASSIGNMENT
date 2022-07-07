@@ -1,0 +1,7 @@
+QN1. write a querry that returns 5 movies with the highest rating.
+
+SELECT sh.title FROM shows sh, ratings r WHERE r.show_id = sh.id ORDER BY r.rating DESC LIMIT 5;
+
+QN2. Write aquerry that returns all the genres of the movies acted by Robert Downey Jr.
+
+SELECT g.genre FROM people p, stars s, genres g WHERE p.id AND s.show_id=g.show_id AND p.name LIKE "%Robert Downey Jr%"
